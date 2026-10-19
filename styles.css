@@ -1,8 +1,8 @@
 /* Class 11 · Step 4: the basics */
 :root {
     --text: #1a1a1a;
-    --text-muted: #6b7280;
-    --accent: #2563eb;
+    --text-muted: #63656b;
+    --accent: #a10925;
     --background: #ffffff;
     --border: #e5e7eb;
 }
@@ -29,3 +29,12 @@ h2 {
 }
 
 footer { margin-top: 4rem; color: var(--text-muted); font-size: 0.9rem; }
+
+/* Lab 11 · Task 4: links */
+a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+a:hover { border-bottom-color: var(--accent); }
