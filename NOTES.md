@@ -1,0 +1,2 @@
+## Week 8, Friday
+On a phone, the header was too wide to fit the photo and my name side by side, so the photo got squeezed into a narrow oval and my name wrapped onto two cramped lines. I fixed it by adding flex-wrap: wrap to the header, so the photo stays a full circle and my name drops below it when there isn't room.
