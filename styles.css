@@ -5,10 +5,10 @@
     --accent: #a10925;
     --background: #ffffff;
     --border: #e5e7eb;
-}
+} 
 
 body {
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-family: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
     color: var(--text);
     background: var(--background);
     line-height: 1.6;
@@ -17,18 +17,58 @@ body {
     padding: 3rem 1.5rem;
 }
 
-h1 { font-size: 2.5rem; margin-bottom: 0.25rem; }
+/* Lab 12 · Task 1: header side by side */
+/* Lab 12 · Task 4: let the header stack when there isn't room */
+header {    
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
 
-header p { color: var(--text-muted); font-size: 1.1rem; margin-top: 0; }
+h1 {
+    font-size: 3rem; /* Class 12 · Step 2: my own scale */
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-top: 0;
+}
 
 h2 {
+    font-size: 2rem;
+    line-height: 1.25;
     color: var(--accent);
     margin-top: 2.5rem;
+    margin-bottom: 1rem;
     border-bottom: 1px solid var(--border);
     padding-bottom: 0.5rem;
 }
 
-footer { margin-top: 4rem; color: var(--text-muted); font-size: 0.9rem; }
+p {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+}
+
+/* Lab 12 · Task 3: footer */
+footer {
+    margin-top: 4rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: inherit;
+}
 
 /* Lab 11 · Task 4: links */
 a {
@@ -38,3 +78,25 @@ a {
 }
 
 a:hover { border-bottom-color: var(--accent); }
+
+.portrait {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Class 12 · Step 4: spacing on purpose */
+section { margin-bottom: 3rem; }
+
+/* Lab 12 · Task 2: list without bullets */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--accent);
+}
