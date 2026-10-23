@@ -4,7 +4,7 @@
     --text-muted: #63656b;
     --accent: #a10925;
     --background: #ffffff;
-    --border: #e5e7eb;
+    --border: #d6baba;
 } 
 
 body {
@@ -113,3 +113,37 @@ nav a {
 nav a:hover {
     border-bottom-color: var(--accent);
 }
+
+/* Lab 13 · Task 1: which page am I on */
+nav a.current {
+    border-bottom-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Class 13 · Step 3: nav as a row */
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+nav li {
+    margin-bottom: 0;
+    padding-left: 0;
+    border-left: none;
+}
+
+/* Lab 13 · Task 4: separate the bar from the header */
+
+nav {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2rem;
+}
+
+/* Lab 13 · Task 5: keyboard focus outline */
+nav a:focus-visible {
+       outline: 2px solid var(--accent);
+       outline-offset: 4px;
+   }
