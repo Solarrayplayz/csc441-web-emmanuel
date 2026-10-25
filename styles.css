@@ -147,3 +147,31 @@ nav a:focus-visible {
        outline: 2px solid var(--accent);
        outline-offset: 4px;
    }
+
+
+/* Class 14 · Step 3: stack by default */
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card {
+    flex: 1;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 0;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+/* Class 14 · Step 3: a row when there's room */
+@media (min-width: 40rem) {
+    .cards {
+        flex-direction: row;
+    }
+}
