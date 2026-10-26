@@ -53,18 +53,6 @@ p {
     margin-bottom: 1rem;
 }
 
-/* Lab 12 · Task 3: footer */
-footer {
-    margin-top: 4rem;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    border-top: 1px solid var(--border);
-    padding-top: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 footer p {
     margin: 0;
     font-size: inherit;
@@ -102,11 +90,14 @@ li {
 }
 
 /* Class 13 · Step 3: the nav bar */
+/* Lab 14 · Task 5: bigger tap targets for the nav */
 
 nav a {
+    display: inline-block;
+    font-size: 1.5rem;
     text-decoration: none;
     font-weight: 700;
-    padding-bottom: 0.25rem; 
+    padding: 0.5rem 0; 
     border-bottom: 2px solid transparent;
 }
 
@@ -120,6 +111,10 @@ nav a.current {
     color: var(--accent);
 }
 
+<<<<<<< HEAD
+/* Class 13 · Step 3: nav as a row */
+=======
+>>>>>>> d0d4156f68c4a09b8de4582450876704334ec79a
 /* Lab 14 · Task 1: the nav stacks on narrow screens */
 nav ul {
     display: flex;
@@ -127,6 +122,14 @@ nav ul {
     gap: 0.5rem;
     list-style: none;
     padding-left: 0;
+    margin-bottom: 0;
+}
+
+@media (min-width: 40rem) {
+    nav ul {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
 }
 
 @media (min-width: 40rem) {
@@ -145,9 +148,17 @@ nav li {
 /* Lab 13 · Task 4: separate the bar from the header */
 
 nav {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border-bottom: 1px solid var(--border);
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* Lab 14 · Task 5: less space under the nav on phones */
+@media (min-width: 40rem) {
+    nav {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+    }
 }
 
 /* Lab 13 · Task 5: keyboard focus outline */
@@ -157,14 +168,66 @@ nav a:focus-visible {
    }
 
 
-/* Class 14 · Step 2: the cards go in a row */
+/* Class 14 · Step 3: stack by default */
 .cards {
-display: flex;
-gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: space-between;
+    align-items: flex-start;
+
 }
+
 .card {
-flex: 1;
-padding: 1.5rem;
-border: 1px solid var(--border);
-border-radius: 8px;
+    flex: 1;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 0;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+/* Class 14 · Step 3: a row when there's room */
+@media (min-width: 40rem) {
+    .cards {
+        flex-direction: row;
+    }
+}
+
+/* Lab 12 · Task 3: footer */
+/* Lab 14 · Task 4: footer stacks on narrow screens */
+footer {
+    margin-top: 4rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+@media (min-width: 40rem) {
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Lab 14 · extra: space between the header photo and the cards (tennis and projects pages) */
+.tennis-main,
+.projects-main {
+    margin-top: 2rem;
+}
+
+/* Lab 14 · Task 6: second breakpoint, widen the page on big monitors */
+@media (min-width: 64rem) {
+    body {
+        max-width: 60rem;
+    }
 }
