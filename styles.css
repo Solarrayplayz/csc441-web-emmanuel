@@ -111,7 +111,10 @@ nav a.current {
     color: var(--accent);
 }
 
+<<<<<<< HEAD
 /* Class 13 · Step 3: nav as a row */
+=======
+>>>>>>> d0d4156f68c4a09b8de4582450876704334ec79a
 /* Lab 14 · Task 1: the nav stacks on narrow screens */
 nav ul {
     display: flex;
@@ -120,6 +123,13 @@ nav ul {
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
+}
+
+@media (min-width: 40rem) {
+    nav ul {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
 }
 
 @media (min-width: 40rem) {
