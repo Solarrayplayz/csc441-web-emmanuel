@@ -111,10 +111,7 @@ nav a.current {
     color: var(--accent);
 }
 
-<<<<<<< HEAD
 /* Class 13 · Step 3: nav as a row */
-=======
->>>>>>> d0d4156f68c4a09b8de4582450876704334ec79a
 /* Lab 14 · Task 1: the nav stacks on narrow screens */
 nav ul {
     display: flex;
@@ -230,4 +227,12 @@ footer {
     body {
         max-width: 60rem;
     }
+}
+
+body.dark {
+    --text: white;
+    --text-muted: silver;
+    --accent: skyblue;
+    --background: rgb(0, 0, 0);
+    --border: dimgray;
 }
