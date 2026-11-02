@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Class 16 · Step 1: my contact page -->
+    <title>Contact · Emmanuel Cottle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="tennis.html">Tennis</a></li>
+            <li><a href="contact.html" class="current">Contact</a></li>
+            <li><button id="theme-toggle" type="button">Dark</button></li>
+        </ul>
+    </nav>
+
+    <header>
+        <img src="images/me.jpg" alt="Portrait of Emmanuel Cottle" class="portrait">
+        <div class="header-text">
+            <h1>Contact</h1>
+            <p>Questions or anything else.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Class 16 · Step 2: a form -->
+        <form id="contact-form">
+            <p>
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" required>
+            </p>
+            <p>
+                <label for="email">Your email</label>
+                <input id="email" name="email" type="email" required>
+            </p>
+            <p>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </p>
+            <button type="submit">Send</button>
+        </form>
+        <p id="form-status" role="status"></p>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Emmanuel Cottle</p>
+        <a href="https://github.com/Solarrayplayz" target="_blank" rel="noopener">GitHub</a>
+    </footer>
+</body>
+
+</html>

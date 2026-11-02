@@ -260,3 +260,21 @@ form button {
 
 /* Lab 16 · Task 1: the error state */
 #form-status.error { color: var(--error); }
+
+/* Lab 16 · Task 3: theme button matches the nav and is easy to tap */
+nav button {
+    font: inherit;
+    font-weight: 700;
+    color: var(--accent);
+    background: transparent;
+    border: 2px solid var(--accent);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    min-height: 44px;
+    cursor: pointer;
+}
+
+/* Lab 16 · Task 3: Send button is at least 44px tall */
+form button {
+    min-height: 44px;
+}

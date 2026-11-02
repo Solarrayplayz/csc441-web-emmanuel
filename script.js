@@ -41,6 +41,16 @@ const contactForm = document.querySelector("#contact-form");
 if (contactForm) {
     const formStatus = document.querySelector("#form-status");
 
+    // Lab 16 · Task 4: remember a draft so a closed tab doesn't lose it
+    const messageField = document.querySelector("#message");
+    const savedDraft = localStorage.getItem("draft");
+    if (savedDraft) {
+        messageField.value = savedDraft;
+    }
+    messageField.addEventListener("input", function () {
+        localStorage.setItem("draft", messageField.value);
+    });
+
     // Lab 16 · Task 1: my own check before accepting it
     contactForm.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -54,6 +64,8 @@ if (contactForm) {
         formStatus.classList.remove("error");
         formStatus.textContent = "Thanks, " + name + ". Your message is ready to send.";
         contactForm.reset();
+        // Lab 16 · Task 4: the message was accepted, so the draft is no longer needed
+        localStorage.removeItem("draft");
     });
 
     // Lab 16 · Task 2: clear the error once they start fixing it
