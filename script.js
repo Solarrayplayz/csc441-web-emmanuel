@@ -1,13 +1,37 @@
-// Class 15: Step 1 : This file is running
+// Class 15 · Step 1: this file is running
 console.log("script.js is running");
 
-// Class 15: Step 2: put this year in the footer
+// Class 15 · Step 2: put this year in the footer
 const yearSpan = document.querySelector("#year");
-yearSpan.textContent = new Date().getFullYear();
+// Lab 15 · Task 2: only run if the span exists
+if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+}
 
-// Class 15: Step 3: a button that changes the page
+// Class 15 · Step 3: a button that changes the page
 const themeButton = document.querySelector("#theme-toggle");
+if (themeButton) {
+    // Lab 15 · Task 4: use the saved choice on arrival
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+        themeButton.textContent = "Light";
+    }
 
-themeButton.addEventListener("click", function () {
-    document.body.classList.toggle("dark");
-});
+    // Lab 15 · Task 3 and 4: the label swaps, and the choice is remembered
+    themeButton.addEventListener("click", function () {
+        document.body.classList.toggle("dark");
+        if (document.body.classList.contains("dark")) {
+            themeButton.textContent = "Light";
+            localStorage.setItem("theme", "dark");
+        } else {
+            themeButton.textContent = "Dark";
+            localStorage.setItem("theme", "light");
+        }
+    });
+}
+
+// Lab 15 · Task 5: count my own projects
+const projectCount = document.querySelector("#project-count");
+if (projectCount) {
+    projectCount.textContent = document.querySelectorAll(".card").length;
+}
