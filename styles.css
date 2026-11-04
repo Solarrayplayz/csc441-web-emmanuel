@@ -1,3 +1,8 @@
+/* Class 16 · Step 3: padding counts inside the width */
+* {
+    box-sizing: border-box;
+}
+
 /* Class 11 · Step 4: the basics */
 :root {
     --text: #1a1a1a;
@@ -236,4 +241,40 @@ body.dark {
     --accent: skyblue;
     --background: rgb(0, 0, 0);
     --border: dimgray;
+}
+
+/* Class 16 · Step 3: the form */
+form label { display: block; font-weight: 700; margin-bottom: 0.25rem; }
+form input, form textarea {
+    font: inherit; width: 100%; padding: 0.5rem;
+    border: 1px solid var(--border); border-radius: 6px;
+    background: var(--background); color: var(--text);
+}
+form input:focus, form textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+form button {
+    font: inherit; font-weight: 700; color: var(--background);
+    background: var(--accent); border: none; border-radius: 6px;
+    padding: 0.6rem 1.4rem; cursor: pointer;
+}
+#form-status { font-weight: 700; color: var(--accent); }
+
+/* Lab 16 · Task 1: the error state */
+#form-status.error { color: var(--error); }
+
+/* Lab 16 · Task 3: theme button matches the nav and is easy to tap */
+nav button {
+    font: inherit;
+    font-weight: 700;
+    color: var(--accent);
+    background: transparent;
+    border: 2px solid var(--accent);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    min-height: 44px;
+    cursor: pointer;
+}
+
+/* Lab 16 · Task 3: Send button is at least 44px tall */
+form button {
+    min-height: 44px;
 }

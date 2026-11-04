@@ -35,3 +35,44 @@ const projectCount = document.querySelector("#project-count");
 if (projectCount) {
     projectCount.textContent = document.querySelectorAll(".card").length;
 }
+
+// Class 16 · Step 4: handle the submit
+const contactForm = document.querySelector("#contact-form");
+if (contactForm) {
+    const formStatus = document.querySelector("#form-status");
+
+    // Lab 16 · Task 4: remember a draft so a closed tab doesn't lose it
+    const messageField = document.querySelector("#message");
+    const savedDraft = localStorage.getItem("draft");
+    if (savedDraft) {
+        messageField.value = savedDraft;
+    }
+    messageField.addEventListener("input", function () {
+        localStorage.setItem("draft", messageField.value);
+    });
+
+    // Lab 16 · Task 1: my own check before accepting it
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const name = document.querySelector("#name").value.trim();
+        const message = document.querySelector("#message").value.trim();
+        if (message.length < 10) {
+            formStatus.textContent = "Please write a bit more, at least 10 characters.";
+            formStatus.classList.add("error");
+            return;
+        }
+        formStatus.classList.remove("error");
+        formStatus.textContent = "Thanks, " + name + ". Your message is ready to send.";
+        contactForm.reset();
+        // Lab 16 · Task 4: the message was accepted, so the draft is no longer needed
+        localStorage.removeItem("draft");
+    });
+
+    // Lab 16 · Task 2: clear the error once they start fixing it
+    contactForm.addEventListener("input", function () {
+        if (formStatus.classList.contains("error")) {
+            formStatus.textContent = "";
+            formStatus.classList.remove("error");
+        }
+    });
+}
