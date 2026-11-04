@@ -22,3 +22,20 @@ On the Tennis and Projects pages the header photo was overlapping with the first
 ## Week 11, Wednesday
 Live site: https://emmanuelcottle.netlify.app
 
+1. In your own words: what does GitHub do, and what does Netlify do?
+
+Github is a website that allows you to push your code to the web for others to access. 
+
+2. You are about to merge into development and your live site will
+not change. Why?
+
+My live site will not change because my live site is the release branch and not my development branch
+
+3. What does the padlock in the address bar actually mean?
+
+It tells you if your connection is secure as well as being able to see cookies, site data, as well as site settings (which are things a site has access to like camera and microphone).
+
+4. Your repository is public and now your site is too. Is there
+anything in your repo you would not hand a stranger?
+
+No to be honest I wouldn't mind anyone to see what I have on my website. It is just some interests in compsci and some places I traveled for tennis.
