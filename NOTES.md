@@ -18,3 +18,7 @@ On the Tennis and Projects pages the header photo was overlapping with the first
 3. For justify-content and align-items, align-items changed how the cards were laid out depending on the value. With center, the cards lined up through the middle, but they were different sizes because each card has a different amount of text. With stretch, all the cards were the same size, but the cards with less text had a lot of blank space. flex-start made the cards ascend and flex-end made them descend, also because of the amount of text. With flex-direction: column;, the cards stacked vertically instead of horizontally. justify-content did a whole lot of nothing based on what I saw. I think it did nothing because my cards already fill the whole row, so there was no extra space to move them around in.
 
 4. The plain rule applies on every screen, so the phone layout works with no query at all. The media query then adds changes only when there is room. If it were the other way round, phones would have to undo the wide layout, and a phone is the cramped case where a mistake costs the most. Writing narrow first means each rule only adds what the bigger screen needs.
+
+## Week 11, Wednesday
+Live site: https://emmanuelcottle.netlify.app
+
