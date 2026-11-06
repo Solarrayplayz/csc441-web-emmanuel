@@ -279,3 +279,8 @@ nav button {
 form button {
     min-height: 44px;
 }
+
+/* Class 18: Step 2: the honeypot, hidden from peopple */
+.hidden-field { 
+    display: none;
+}

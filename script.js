@@ -47,6 +47,7 @@ if (contactForm) {
     if (savedDraft) {
         messageField.value = savedDraft;
     }
+
     messageField.addEventListener("input", function () {
         localStorage.setItem("draft", messageField.value);
     });
@@ -56,14 +57,17 @@ if (contactForm) {
         event.preventDefault();
         const name = document.querySelector("#name").value.trim();
         const message = document.querySelector("#message").value.trim();
+
         if (message.length < 10) {
             formStatus.textContent = "Please write a bit more, at least 10 characters.";
             formStatus.classList.add("error");
             return;
         }
+
         formStatus.classList.remove("error");
         formStatus.textContent = "Thanks, " + name + ". Your message is ready to send.";
-        contactForm.reset();
+        contactForm.submit();
+
         // Lab 16 · Task 4: the message was accepted, so the draft is no longer needed
         localStorage.removeItem("draft");
     });
