@@ -31,10 +31,15 @@
             <p>Questions or anything else.</p>
         </div>
     </header>
-
     <main>
         <!-- Class 16 · Step 2: a form -->
-        <form id="contact-form">
+        <!-- Class 18 Step 1 : Let Netlify handle the submission -->
+        <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <p class="hidden-field"> 
+                <label>Leave this empty: <input name="bot-field" type="text"></label>
+            </p>
+
+
             <p>
                 <label for="name">Your name</label>
                 <input id="name" name="name" type="text" required>

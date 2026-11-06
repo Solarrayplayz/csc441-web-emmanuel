@@ -19,30 +19,23 @@ On the Tennis and Projects pages the header photo was overlapping with the first
 
 4. The plain rule applies on every screen, so the phone layout works with no query at all. The media query then adds changes only when there is room. If it were the other way round, phones would have to undo the wide layout, and a phone is the cramped case where a mistake costs the most. Writing narrow first means each rule only adds what the bigger screen needs.
 
+## Week 11, Wednesday
+Live site: https://emmanuelcottle.netlify.app
 
-## Week 10, Wednesday
+1. In your own words: what does GitHub do, and what does Netlify do?
 
-1. HTML is what's on the page (the content and structure).CSS is how it looks (colors, fonts, layout).JavaScript is what happens when someone does something (clicks, loads).
+Github is a website that allows you to push your code to the web for others to access. 
 
-2. defer tells the browser to finish building the page first, then run the script. Without it, the script can run before the elements exist, so querySelector finds nothing (null) and the code breaks.
+2. You are about to merge into development and your live site will
+not change. Why?
 
-3. Dark mode only redefines the variables in body.dark (--background, --text, etc.),and every rule using var(...) picks up the new values automatically. Without variables I'd have had to find and change every typed-in color by hand across all my pages.
+My live site will not change because my live site is the release branch and not my development branch
 
-4. My dark mode wouldn't stick between pages and the Console showed nothing. I found it by checking localStorage in the Console.
+3. What does the padlock in the address bar actually mean?
 
-5. I don't know how to make the theme button look like my nav links yet.
+It tells you if your connection is secure as well as being able to see cookies, site data, as well as site settings (which are things a site has access to like camera and microphone).
 
-## Week 10, Friday
+4. Your repository is public and now your site is too. Is there
+anything in your repo you would not hand a stranger?
 
-1. event.preventDefault() stops the form from reloading the page when I press Send. Without it, everything I typed disappears.
-
-2. querySelector returned null because that page doesn't have a form. Using null caused the error, and the if only runs the code when the element is actually found.
-
-3. My rule rejects messages under 10 characters after trimming spaces, because required only checks that the field isn't empty, so a single character or a few spaces would pass.
-
-4. The theme button was the browser’s default grey and too small to tap comfortably, so I styled it to match my nav with a 44px minimum height. The Send button had no minimum height, so I gave it min-height: 44px so it’s easy to hit with a thumb.
-
-5. Right now the form doesn’t send the message anywhere. I think something is missing that receives it and does something with it, like a place to store the messages or a way to send them to my email.
-
-
-
+No to be honest I wouldn't mind anyone to see what I have on my website. It is just some interests in compsci and some places I traveled for tennis.
