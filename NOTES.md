@@ -39,3 +39,18 @@ It tells you if your connection is secure as well as being able to see cookies, 
 anything in your repo you would not hand a stranger?
 
 No to be honest I wouldn't mind anyone to see what I have on my website. It is just some interests in compsci and some places I traveled for tennis.
+
+# Week 11, Friday
+
+1. The hidden bot-field is to trap for any bots trying to enter the website. The field is hidden from people by CSS, so humans can't see it but bots fill in every field they find. If it has anything in it, Netlify knows it's a bot and throws the message away. It's better than asking people to prove they're human because a bot that fails a test learns it was caught, but a bot that sees a cheerful thank-you page learns nothing.
+
+2.  A deploy preview is a temporary live copy of my site for each pull request I open. You could use one before you merge a change you are working on.
+
+3. On my phone over cellular, the first load took about 3 seconds and the second about 1, so I checked the image folder and found my portrait was 362K. I recompressed it to 49K without changing its dimensions. Everything else I tested (nav taps, theme button, the @ keyboard, my 404 page, sideways scroll) worked with nothing to fix.
+
+
+4. First the branch I work on like W11_fri_s18, that gets pushed to the development branch where a feature could still be in the works, then after to release for the public.
+
+5. Both addresses work because they point to the same Netlify project. The netlify.app address always exists, and my own .me domain points to Netlify through the A record and CNAME I added, so either one reaches my site.
+
+6. One thing I'd want to add on my website is a small animation popup when the site loads in.
