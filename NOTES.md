@@ -40,9 +40,9 @@ anything in your repo you would not hand a stranger?
 
 No to be honest I wouldn't mind anyone to see what I have on my website. It is just some interests in compsci and some places I traveled for tennis.
 
-# Week 11, Friday
+## Week 11, Friday
 
-1. The hidden bot-field is to trap for any bots trying to enter the website. The field is hidden from people by CSS, so humans can't see it but bots fill in every field they find. If it has anything in it, Netlify knows it's a bot and throws the message away. It's better than asking people to prove they're human because a bot that fails a test learns it was caught, but a bot that sees a cheerful thank-you page learns nothing.
+1. The hidden bot-field is to trap for any bots trying to enter  the website. The field is hidden from people by CSS, so humans can't see it but bots fill in every field they find. If it has anything in it, Netlify knows it's a bot and throws the message away. It's better than asking people to prove they're human because a bot that fails a test learns it was caught, but a bot that sees a cheerful thank-you page learns nothing.
 
 2.  A deploy preview is a temporary live copy of my site for each pull request I open. You could use one before you merge a change you are working on.
 
