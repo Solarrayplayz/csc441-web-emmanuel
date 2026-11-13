@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Class 13 · Step 1: my second page -->
+    <title>Projects · Emmanuel Cottle</title>
+
+    <!-- Class 12 · Step 1: a typeface I chose -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lab 15 · Task 1: my third file -->
+    <script src="script.js" defer></script>
+    <!-- Class 20: Step 2: API connection, then API page -->
+    <script src="config.js" defer></script>
+    <script src="interests.js" defer></script>
+</head>
+
+<body>
+    <!-- Class 13 · Step 2: navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="tennis.html">Tennis</a></li>
+            <li><a href="interests.html" class="current">Interests</a></li>
+            <!-- Class 16 · Step 1: the contact link -->
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Lab 15 · Task 1: the theme button -->
+            <li><button id="theme-toggle" type="button">Dark</button></li>
+        </ul>
+    </nav>
+    <!-- Class 11 · Step 2: the page -->
+    <!-- Lab 12 · Task 1: group the text so it stacks beside the photo -->
+    <header>
+        <!-- Class 12 · Step 3: an image -->
+        <img src="images/me.jpg" alt="Portrait of Emmanuel Cottle" class="portrait">
+        <div class="header-text">
+            <h1>Interests</h1>
+            <!-- Lab 15 · Task 5: the project count is written by JavaScript -->
+            <p>Here are the <span id="project-count"></span> projects I've worked on while at Le Moyne College &amp; in my free time.</p>
+        </div>
+    </header>
+
+    <main>
+        <!--Class 20: Step 1: add inside the existing <main> on interests.hmtl -->
+        <section class="interests-section">
+        <h2> My Interests</h2>
+        <p> These Items come from my Supabase database </p>
+        <p id="showcase-status" role="status"> Waiting to load...</p>
+        <p id="showcase-count" p></p>
+        <div id="showcase-grid" class="showcase-grid"></div>
+        </section>
+    
+    </main>
+
+    <!-- Lab 12 · Task 3: two things in the footer -->
+    <footer>
+        <!-- Lab 15 · Task 1: the year, written by JavaScript -->
+        <p>&copy; <span id="year"></span> Emmanuel Cottle</p>
+        <!-- Lab 11 · Task 3: a link off my page -->
+        <a href="https://github.com/Solarrayplayz" target="_blank" rel="noopener">GitHub</a>
+    </footer>
+</body> 
+
+</html>
