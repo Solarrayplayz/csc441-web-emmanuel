@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Photography",
+        "category": "Creative"
+    },
+    {
+        "title": "Reading",
+        "category": "Learning"
+    },
+    {
+        "title": "Hiking",
+        "category": "Outdoors"
+    },
+    {
+        "title": "Gaming",
+        "category": "Entertainment"
+    },
+    {
+        "title": "Anime",
+        "category": "Movies / TV"
+    }
+]
