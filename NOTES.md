@@ -54,3 +54,15 @@ No to be honest I wouldn't mind anyone to see what I have on my website. It is j
 5. Both addresses work because they point to the same Netlify project. The netlify.app address always exists, and my own .me domain points to Netlify through the A record and CNAME I added, so either one reaches my site.
 
 6. One thing I'd want to add on my website is a small animation popup when the site loads in.
+
+## Week 12, Wednesday, Lab 19
+
+1. A database table stores data in rows and columns. Each row is one record, like one of my interests, and each column is one field such as title or category.
+
+2. The table is where the data is stored in Supabase. An API endpoint is the URL that lets other programs ask for that data over HTTP.
+
+3. GET reads data without changing it. My endpoint returned JSON, an array of objects, one per record.
+
+4. The publishable key is safe in the browser because it only has the access my read-only security rules allow. A secret key bypasses those rules and could let anyone change or delete my data.
+
+5. Changing select=* to select=title,category made the API return only those two fields. The response no longer has id, description, image_url or created_at, because I did not request them.
