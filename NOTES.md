@@ -54,3 +54,15 @@ No to be honest I wouldn't mind anyone to see what I have on my website. It is j
 5. Both addresses work because they point to the same Netlify project. The netlify.app address always exists, and my own .me domain points to Netlify through the A record and CNAME I added, so either one reaches my site.
 
 6. One thing I'd want to add on my website is a small animation popup when the site loads in.
+
+## Week 12, Friday — Lab 20
+
+1. fetch() sends an HTTP GET request to my Supabase URL with my publishable key in the apikey header. response.json() reads the response body and turns the JSON text into JavaScript objects, an array with one object per record.
+
+2. textContent puts the data on the page as plain text. innerHTML would treat it as HTML, so if the data came from outside my page and contained tags or a script, it could run on my site.
+
+3. If Supabase returns an empty list, the loop makes no cards, the status says "No items yet." and the count shows 0 items.
+
+4. When the network fails, fetch throws an error and the catch block runs. The page shows "Could not load the items. Check the Console." and logs the error. After I go back online, clicking Refresh items sends a new request and the cards load.
+
+5. The HTML file only has an empty #showcase-grid. The cards appear after the fetch, and when I change a title in Supabase and click Refresh items the card changes without me editing any HTML or JavaScript.
