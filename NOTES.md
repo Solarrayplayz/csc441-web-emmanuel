@@ -40,9 +40,9 @@ anything in your repo you would not hand a stranger?
 
 No to be honest I wouldn't mind anyone to see what I have on my website. It is just some interests in compsci and some places I traveled for tennis.
 
-# Week 11, Friday
+## Week 11, Friday
 
-1. The hidden bot-field is to trap for any bots trying to enter the website. The field is hidden from people by CSS, so humans can't see it but bots fill in every field they find. If it has anything in it, Netlify knows it's a bot and throws the message away. It's better than asking people to prove they're human because a bot that fails a test learns it was caught, but a bot that sees a cheerful thank-you page learns nothing.
+1. The hidden bot-field is to trap for any bots trying to enter  the website. The field is hidden from people by CSS, so humans can't see it but bots fill in every field they find. If it has anything in it, Netlify knows it's a bot and throws the message away. It's better than asking people to prove they're human because a bot that fails a test learns it was caught, but a bot that sees a cheerful thank-you page learns nothing.
 
 2.  A deploy preview is a temporary live copy of my site for each pull request I open. You could use one before you merge a change you are working on.
 
@@ -54,3 +54,27 @@ No to be honest I wouldn't mind anyone to see what I have on my website. It is j
 5. Both addresses work because they point to the same Netlify project. The netlify.app address always exists, and my own .me domain points to Netlify through the A record and CNAME I added, so either one reaches my site.
 
 6. One thing I'd want to add on my website is a small animation popup when the site loads in.
+
+## Week 12, Wednesday, Lab 19
+
+1. A database table stores data in rows and columns. Each row is one record, like one of my interests, and each column is one field such as title or category.
+
+2. The table is where the data is stored in Supabase. An API endpoint is the URL that lets other programs ask for that data over HTTP.
+
+3. GET reads data without changing it. My endpoint returned JSON, an array of objects, one per record.
+
+4. The publishable key is safe in the browser because it only has the access my read-only security rules allow. A secret key bypasses those rules and could let anyone change or delete my data.
+
+5. Changing select=* to select=title,category made the API return only those two fields. The response no longer has id, description, image_url or created_at, because I did not request them.
+
+## Week 12, Friday — Lab 20
+
+1. fetch() sends an HTTP GET request to my Supabase URL with my publishable key in the apikey header. response.json() reads the response body and turns the JSON text into JavaScript objects, an array with one object per record.
+
+2. textContent puts the data on the page as plain text. innerHTML would treat it as HTML, so if the data came from outside my page and contained tags or a script, it could run on my site.
+
+3. If Supabase returns an empty list, the loop makes no cards, the status says "No items yet." and the count shows 0 items.
+
+4. When the network fails, fetch throws an error and the catch block runs. The page shows "Could not load the items. Check the Console." and logs the error. After I go back online, clicking Refresh items sends a new request and the cards load.
+
+5. The HTML file only has an empty #showcase-grid. The cards appear after the fetch, and when I change a title in Supabase and click Refresh items the card changes without me editing any HTML or JavaScript.
