@@ -66,3 +66,15 @@ No to be honest I wouldn't mind anyone to see what I have on my website. It is j
 4. The publishable key is safe in the browser because it only has the access my read-only security rules allow. A secret key bypasses those rules and could let anyone change or delete my data.
 
 5. Changing select=* to select=title,category made the API return only those two fields. The response no longer has id, description, image_url or created_at, because I did not request them.
+
+## Week 12, Friday — Lab 20
+
+1. fetch() sends an HTTP GET request to my Supabase URL with my publishable key in the apikey header. response.json() reads the response body and turns the JSON text into JavaScript objects, an array with one object per record.
+
+2. textContent puts the data on the page as plain text. innerHTML would treat it as HTML, so if the data came from outside my page and contained tags or a script, it could run on my site.
+
+3. If Supabase returns an empty list, the loop makes no cards, the status says "No items yet." and the count shows 0 items.
+
+4. When the network fails, fetch throws an error and the catch block runs. The page shows "Could not load the items. Check the Console." and logs the error. After I go back online, clicking Refresh items sends a new request and the cards load.
+
+5. The HTML file only has an empty #showcase-grid. The cards appear after the fetch, and when I change a title in Supabase and click Refresh items the card changes without me editing any HTML or JavaScript.
